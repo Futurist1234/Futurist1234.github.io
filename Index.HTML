@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Main Menu </title>
+		<script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
+	<script>
+		function start(){
+			sjs.open("target", 600, 400);
+			
+			
+			//Menu 
+			var menu_text = new sjs.Text("Mars Pong", 40, "black")
+			menu_text.centerH();
+
+			//Informational Text properties
+			var game_text = new sjs.Text(" Since this is a 2 player game, Player 1 uses A and D keys while Player 2 uses the Right and Left arrow keys to control the pallets. REMINDER: Don't let Mars get passed you! One more thing, to play music press the space bar while in the game.", 20, "#ff0");
+			game_text.centerH().offset(0,70);
+
+			//2 Player Start Button properties
+			var startBtn = new sjs.Button("Commence", function(){
+				window.location = "pong.html";
+
+			});
+
+			startBtn.center();
+			
+			//Creator properties
+			var info_text = new sjs.Text("Created by Justin Lemus", 20, "black");
+			info_text.bottom().centerH();
+
+
+
+
+		} //end start
+	</script>
+</head>
+<body onload="start()">
+	<h1> Menu </h1>
+
+		<div id="target" style="margin:auto;background:grey;"></div>
+	</body>
+</html>
